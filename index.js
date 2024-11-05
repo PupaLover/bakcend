@@ -3,7 +3,7 @@ const TelegramBot = require('node-telegram-bot-api');
 
 
 
-const webAppUrl = 'https://gafko-webapp.netlify.app/';
+const webAppUrl = 'https://uwu-abobiki.netlify.app/';
 
 
 

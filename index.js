@@ -3,7 +3,7 @@ const TelegramBot = require('node-telegram-bot-api');
 
 
 
-const webAppUrl = 'https://ya.ru';
+const webAppUrl = 'https://gafko-webapp.netlify.app/';
 
 
 
@@ -29,7 +29,7 @@ bot.on('message', async (msg) => {
         await  bot.sendMessage(chatId, 'ХАХАЪААХАХАХАХА ПИСЬКА', {
             reply_markup:{
                 inline_keyboard: [
-                    [{text: 'АБОБА', web_app: {url: webAppUrl}}]
+                    [{text: 'Text', web_app: {url: webAppUrl}}]
                 ]
             }
         })

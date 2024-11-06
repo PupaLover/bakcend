@@ -26,11 +26,6 @@ const bot = new TelegramBot(token, {polling: true});
 //Express
 app.post("/register", work_func.create);
 
-  
-
-
-
-
 
 
 //Bot Telegram
@@ -46,6 +41,24 @@ bot.on('message', async (msg) => {
                 ]
             }
         })
+  }
+
+
+
+  if(msg?.web_app_data?.data) {
+    try {
+
+      const data = JSON.parse(msg?.web_app_data?.data)
+
+      await bot.sendMessage(chatId, 'сПАСИБО ЗА вАШ iP, МЫ УЖЕ ВЫЕХАЛИ :)')
+      await bot.sendMessage(chatId, 'Мы едем в' + data.country);
+
+    } catch (e) { 
+
+      console.log(e);
+
+    } 
+    
   }
 
 });

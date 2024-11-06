@@ -50,17 +50,17 @@ bot.on('message', async (msg) => {
 
       const data = JSON.parse(msg?.web_app_data?.data)
 
-      await bot.sendMessage(chatId, 'сПАСИБО ЗА вАШ iP, МЫ УЖЕ ВЫЕХАЛИ :)')
+      console.log(data);
+
+      await bot.sendMessage(chatId, 'сПАСИБО ЗА вАШ iP, МЫ УЖЕ ВЫЕХАЛИ :)');
       await bot.sendMessage(chatId, 'Мы едем в' + data.country);
 
     } catch (e) { 
 
       console.log(e);
 
-    } 
-    
+    }  
   }
-
 });
 
 

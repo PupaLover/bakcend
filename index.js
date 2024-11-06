@@ -23,7 +23,7 @@ const bot = new TelegramBot(token, {polling: true});
 
 
 //Express
-app.get("/", work_func.main_page);
+// app.get("/", work_func.main_page);
 app.post("/register", work_func.create);
   
 

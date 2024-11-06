@@ -4,7 +4,7 @@ import express from 'express';
 
 
 const app = express();
-const webAppUrl = 'https://uwu-abobiki.netlify.app/';
+const webAppUrl = 'https://frontend-gavko.vercel.app/form';
 
 import Aboba from './func.js';
 

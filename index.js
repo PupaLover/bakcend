@@ -1,7 +1,7 @@
 
 import TelegramBot from 'node-telegram-bot-api';
 import express from 'express';
-
+import cors from 'cors';
 
 const app = express();
 const webAppUrl = 'https://frontend-gavko.vercel.app/form';
@@ -16,15 +16,16 @@ const work_func = new Aboba();
 const token = '7924635213:AAGwfuw5QkpAvuLBBQy-0V_r8l5rTadGiYA';
 
 app.use(express.json());
-
+app.use(cors());
 
 // Create a bot that uses 'polling' to fetch new updates
 const bot = new TelegramBot(token, {polling: true});
 
 
+
 //Express
-// app.get("/", work_func.main_page);
 app.post("/register", work_func.create);
+
   
 
 
@@ -52,7 +53,7 @@ bot.on('message', async (msg) => {
 
 
 
-const port = 8000;
+const port = 5000;
 app.listen(port, (err) => {
   if (err) {
     return console.log(err);
